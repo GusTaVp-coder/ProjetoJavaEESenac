@@ -109,4 +109,24 @@
     <servlet-name>ProfessorExcluirServlet</servlet-name>
     <url-pattern>/ProfessorExcluirServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProfessorBuscarServlet</display-name>
+    <servlet-name>ProfessorBuscarServlet</servlet-name>
+    <servlet-class>br.com.cursoja.agendacurso.view.ProfessorBuscarServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProfessorBuscarServlet</servlet-name>
+    <url-pattern>/ProfessorBuscarServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CursoBuscarServlet</display-name>
+    <servlet-name>CursoBuscarServlet</servlet-name>
+    <servlet-class>br.com.cursoja.agendacurso.view.CursoBuscarServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CursoBuscarServlet</servlet-name>
+    <url-pattern>/CursoBuscarServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -11,6 +11,14 @@
 </head>
 <body>
 
+	<form action="ProfessorBuscarServlet" method="get">
+	
+		<label>Filtrar Professores</label>
+		<input type="text" name="nomeBusca" required>
+		<input type="submit" value="Pesquisar">
+		
+	</form>
+
 	<table>
 	
 		<thead>
@@ -23,8 +31,16 @@
 		<tbody>
 		
 			<% ProfessorController controller = new ProfessorController();
-			   ArrayList<Professor> lista = controller.listar("");
+			   ArrayList<Professor> lista = null;
 			   
+			   if(request.getAttribute("nomeBusca") == null)
+			   {
+			   		lista = controller.listar("");
+			   }
+			   else
+			   {
+				   lista = controller.listar( (String) request.getAttribute("nomeBusca"));
+			   }
 			   for(Professor p : lista)
 			   {%>
 		

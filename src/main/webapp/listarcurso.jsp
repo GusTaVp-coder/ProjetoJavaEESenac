@@ -12,6 +12,14 @@
 </head>
 <body>
 
+	<form action="CursoBuscarServlet" method="get">
+	
+		<label>Filtrar Cursos</label>
+		<input type="text" name="nomeBusca" required>
+		<input type="submit" value="Pesquisar">
+		
+	</form>
+
 	<table>
 	
 		<thead>
@@ -23,9 +31,17 @@
 		<tbody>
 		
 				<% CursoController controller = new CursoController();
-				   ArrayList<Curso> lista = controller.listar("");
-				   
+				   ArrayList<Curso> lista = null;				   
 				   DecimalFormat fmt = new DecimalFormat("###0.00");
+				   
+				   if(request.getAttribute("nomeBusca") == null)
+				   {
+					   lista = controller.listar("");
+				   }
+				   else
+				   {
+					   lista = controller.listar( (String)request.getAttribute("nomeBusca"));
+				   }
 				   
 				   for(Curso c : lista)
 				   {

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Conexao {
 	//ALTERAR BANCO DE DADOS 'teste' DA VARIAVEL CAMINHO//
-	private String caminho = "jdbc:mysql://localhost:3306/teste";
+	private String caminho = "jdbc:mysql://localhost:3306/cursoja";
 	private String usuario = "root";
 	private String senha = "";
 	
